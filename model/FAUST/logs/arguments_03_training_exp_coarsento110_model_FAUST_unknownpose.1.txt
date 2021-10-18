@@ -1,0 +1,167 @@
+--exp_name coarsento110
+--model_name FAUST_extrapolate.1
+--dataset FAUST
+--device_idx 0
+--refine 3
+--kernel_size 2
+--patch_zeromean True
+--batch_size 100
+--hid_rep 8
+--lr 0.001
+--Niter 501
+--seed 1
+(path) work_dir: /home/sahahner/2105_semireg_mesh_CNN/semiregmesh_public
+(path) data_fp: /home/sahahner/2105_semireg_mesh_CNN/semiregmesh_public/data/FAUST
+(path) data_train_patches: /home/sahahner/2105_semireg_mesh_CNN/semiregmesh_public/data/FAUST/train_patches_coarsento110
+(path) data_training_results: /home/sahahner/2105_semireg_mesh_CNN/semiregmesh_public/data/FAUST/train_patches_coarsento110/output
+(path) model_fp: /home/sahahner/2105_semireg_mesh_CNN/semiregmesh_public/model/FAUST
+
+-----------------
+LOG 
+-----------------
+
+26400 training samples
+6600 testing samples
+18184 trainable weights
+13384800 dimensional input
+
+Epoch   0, Loss:   0.032726, Time: 24.437923 seconds 
+Epoch  10, Loss:   0.001926, Time: 243.798991 seconds 
+Epoch  20, Loss:   0.001078, Time: 246.701370 seconds 
+Epoch  30, Loss:   0.000938, Time: 243.628362 seconds 
+Epoch  40, Loss:   0.000927, Time: 246.658275 seconds 
+Epoch  50, Loss:   0.000862, Time: 248.918418 seconds 
+Epoch  60, Loss:   0.000881, Time: 247.183470 seconds 
+Epoch  70, Loss:   0.000835, Time: 246.483564 seconds 
+Epoch  80, Loss:   0.000943, Time: 246.882770 seconds 
+Epoch  90, Loss:   0.000781, Time: 248.876770 seconds 
+Epoch 100, Loss:   0.000763, Time: 241.675029 seconds 
+Epoch 110, Loss:   0.000758, Time: 244.515681 seconds 
+Epoch 120, Loss:   0.000753, Time: 245.844072 seconds 
+Epoch 130, Loss:   0.000820, Time: 245.262463 seconds 
+Epoch 140, Loss:   0.000767, Time: 245.346089 seconds 
+Epoch 150, Loss:   0.000762, Time: 245.392502 seconds 
+Epoch 160, Loss:   0.000844, Time: 247.305176 seconds 
+Epoch 170, Loss:   0.000847, Time: 244.849385 seconds 
+Epoch 180, Loss:   0.000863, Time: 245.129500 seconds 
+Epoch 190, Loss:   0.000787, Time: 243.996444 seconds 
+Epoch 200, Loss:   0.000785, Time: 245.291836 seconds 
+Epoch 210, Loss:   0.000736, Time: 245.883554 seconds 
+Epoch 220, Loss:   0.000747, Time: 245.796000 seconds 
+Epoch 230, Loss:   0.000798, Time: 247.185234 seconds 
+Epoch 240, Loss:   0.000754, Time: 248.442395 seconds 
+Epoch 250, Loss:   0.000802, Time: 245.949109 seconds 
+Epoch 260, Loss:   0.000739, Time: 244.838689 seconds 
+Epoch 270, Loss:   0.000730, Time: 246.027641 seconds 
+Epoch 280, Loss:   0.000714, Time: 244.954357 seconds 
+Epoch 290, Loss:   0.000731, Time: 245.411138 seconds 
+Epoch 300, Loss:   0.000701, Time: 246.637858 seconds 
+Epoch 310, Loss:   0.000720, Time: 245.933512 seconds 
+Epoch 320, Loss:   0.000707, Time: 245.973266 seconds 
+Epoch 330, Loss:   0.000779, Time: 246.602524 seconds 
+Epoch 340, Loss:   0.000732, Time: 246.332786 seconds 
+Epoch 350, Loss:   0.000705, Time: 245.618902 seconds 
+Epoch 360, Loss:   0.000695, Time: 245.302065 seconds 
+Epoch 370, Loss:   0.000700, Time: 245.343238 seconds 
+Epoch 380, Loss:   0.000718, Time: 246.973214 seconds 
+Epoch 390, Loss:   0.000701, Time: 245.477263 seconds 
+Epoch 400, Loss:   0.000774, Time: 246.509881 seconds 
+Epoch 410, Loss:   0.000696, Time: 246.126419 seconds 
+Epoch 420, Loss:   0.000691, Time: 244.815787 seconds 
+Epoch 430, Loss:   0.000741, Time: 245.654060 seconds 
+Epoch 440, Loss:   0.000700, Time: 245.746868 seconds 
+Epoch 450, Loss:   0.000692, Time: 246.952474 seconds 
+Epoch 460, Loss:   0.000745, Time: 246.756323 seconds 
+Epoch 470, Loss:   0.000706, Time: 248.108127 seconds 
+Epoch 480, Loss:   0.000720, Time: 245.758338 seconds 
+Epoch 490, Loss:   0.000703, Time: 245.223759 seconds 
+Epoch 500, Loss:   0.000706, Time: 246.702630 seconds 
+Finished Training in 12321.215900000001 seconds 
+
+Training error: 0.000471 
+Testing error:  0.000869 
+
+-----------------
+LOG 
+-----------------
+
+
+Minimum training input : -0.6278626322746277
+Maximum training input : 0.6385863423347473
+Minimum training output : -0.5025569200515747
+Maximum training output : 0.4095129370689392
+Minimum testing input : -0.6247453689575195
+Maximum testing input : 0.6401845812797546
+Minimum testing output : -0.5007593631744385
+Maximum testing output : 0.4039309024810791
+
+
+Training error: 0.000471
+Testing error:  0.000869
+
+################
+Sample faust5
+Train Error: 0.000266+0.000598 | 0.000150
+Test  Error: 0.000441+0.000992 | 0.000208
+
+
+################
+Sample faust2
+Train Error: 0.000414+0.000602 | 0.000261
+Test  Error: 0.000661+0.001082 | 0.000321
+
+
+################
+Sample faust4
+Train Error: 0.000311+0.000657 | 0.000180
+Test  Error: 0.000527+0.001032 | 0.000271
+
+
+################
+Sample faust9
+Train Error: 0.000237+0.000481 | 0.000146
+Test  Error: 0.000633+0.001522 | 0.000208
+
+
+################
+Sample faust8
+Train Error: 0.000316+0.000663 | 0.000183
+Test  Error: 0.000515+0.001115 | 0.000251
+
+
+################
+Sample faust1
+Train Error: 0.000288+0.000649 | 0.000176
+Test  Error: 0.000832+0.002188 | 0.000255
+
+
+################
+Sample faust7
+Train Error: 0.000275+0.000471 | 0.000172
+Test  Error: 0.000546+0.001152 | 0.000226
+
+
+################
+Sample faust3
+Train Error: 0.000320+0.000521 | 0.000207
+Test  Error: 0.000687+0.001482 | 0.000267
+
+
+################
+Sample faust0
+Train Error: 0.000326+0.000715 | 0.000180
+Test  Error: 0.000523+0.001054 | 0.000250
+
+
+################
+Sample faust6
+Train Error: 0.000246+0.000598 | 0.000139
+Test  Error: 0.000470+0.001209 | 0.000197
+
+
+
+Total Mean Squared Error:
+
+Train Error: 0.000300+0.000603 | 0.000176
+Test  Error: 0.000583+0.001334 | 0.000244
+

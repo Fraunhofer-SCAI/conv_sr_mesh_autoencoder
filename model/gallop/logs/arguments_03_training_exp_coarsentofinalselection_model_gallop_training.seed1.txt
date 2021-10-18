@@ -1,0 +1,125 @@
+--exp_name coarsentofinalselection
+--model_name gallop_training.seed1
+--dataset gallop
+--device_idx 0
+--refine 3
+--kernel_size 2
+--patch_zeromean True
+--batch_size 100
+--hid_rep 8
+--lr 0.001
+--Niter 501
+--seed 1
+(path) work_dir: /home/sahahner/2105_semireg_mesh_CNN/semiregmesh_public
+(path) data_fp: /home/sahahner/2105_semireg_mesh_CNN/semiregmesh_public/data/gallop
+(path) data_train_patches: /home/sahahner/2105_semireg_mesh_CNN/semiregmesh_public/data/gallop/train_patches_coarsentofinalselection
+(path) data_training_results: /home/sahahner/2105_semireg_mesh_CNN/semiregmesh_public/data/gallop/train_patches_coarsentofinalselection/output
+(path) model_fp: /home/sahahner/2105_semireg_mesh_CNN/semiregmesh_public/model/gallop
+
+-----------------
+LOG 
+-----------------
+
+24084 training samples
+25020 testing samples
+18184 trainable weights
+12210588 dimensional input
+
+Epoch   0, Loss:   0.019562, Time: 24.547067 seconds 
+Epoch  10, Loss:   0.001603, Time: 226.102106 seconds 
+Epoch  20, Loss:   0.001342, Time: 230.103364 seconds 
+Epoch  30, Loss:   0.001214, Time: 234.737819 seconds 
+Epoch  40, Loss:   0.000719, Time: 235.735373 seconds 
+Epoch  50, Loss:   0.000446, Time: 232.974935 seconds 
+Epoch  60, Loss:   0.000352, Time: 234.273677 seconds 
+Epoch  70, Loss:   0.000290, Time: 234.789620 seconds 
+Epoch  80, Loss:   0.000283, Time: 238.814891 seconds 
+Epoch  90, Loss:   0.000255, Time: 238.135180 seconds 
+Epoch 100, Loss:   0.000245, Time: 239.593221 seconds 
+Epoch 110, Loss:   0.000242, Time: 240.053035 seconds 
+Epoch 120, Loss:   0.000253, Time: 236.591461 seconds 
+Epoch 130, Loss:   0.000244, Time: 233.332347 seconds 
+Epoch 140, Loss:   0.000241, Time: 233.926475 seconds 
+Epoch 150, Loss:   0.000242, Time: 234.251085 seconds 
+Epoch 160, Loss:   0.000223, Time: 276.623553 seconds 
+Epoch 170, Loss:   0.000240, Time: 333.157353 seconds 
+Epoch 180, Loss:   0.000228, Time: 233.475736 seconds 
+Epoch 190, Loss:   0.000225, Time: 234.741541 seconds 
+Epoch 200, Loss:   0.000221, Time: 234.469008 seconds 
+Epoch 210, Loss:   0.000215, Time: 233.360302 seconds 
+Epoch 220, Loss:   0.000216, Time: 233.516876 seconds 
+Epoch 230, Loss:   0.000208, Time: 233.390875 seconds 
+Epoch 240, Loss:   0.000209, Time: 234.694572 seconds 
+Epoch 250, Loss:   0.000206, Time: 233.822733 seconds 
+Epoch 260, Loss:   0.000204, Time: 234.082134 seconds 
+Epoch 270, Loss:   0.000204, Time: 234.091366 seconds 
+Epoch 280, Loss:   0.000208, Time: 234.653901 seconds 
+Epoch 290, Loss:   0.000211, Time: 234.019521 seconds 
+Epoch 300, Loss:   0.000202, Time: 234.853544 seconds 
+Epoch 310, Loss:   0.000204, Time: 234.028567 seconds 
+Epoch 320, Loss:   0.000203, Time: 234.772899 seconds 
+Epoch 330, Loss:   0.000204, Time: 235.721474 seconds 
+Epoch 340, Loss:   0.000200, Time: 234.869300 seconds 
+Epoch 350, Loss:   0.000199, Time: 234.885546 seconds 
+Epoch 360, Loss:   0.000197, Time: 234.442652 seconds 
+Epoch 370, Loss:   0.000199, Time: 234.940824 seconds 
+Epoch 380, Loss:   0.000194, Time: 234.787363 seconds 
+Epoch 390, Loss:   0.000196, Time: 234.185406 seconds 
+Epoch 400, Loss:   0.000192, Time: 234.369301 seconds 
+Epoch 410, Loss:   0.000195, Time: 235.523369 seconds 
+Epoch 420, Loss:   0.000194, Time: 234.712742 seconds 
+Epoch 430, Loss:   0.000192, Time: 234.856583 seconds 
+Epoch 440, Loss:   0.000190, Time: 234.345130 seconds 
+Epoch 450, Loss:   0.000194, Time: 233.621214 seconds 
+Epoch 460, Loss:   0.000193, Time: 233.833214 seconds 
+Epoch 470, Loss:   0.000188, Time: 234.492091 seconds 
+Epoch 480, Loss:   0.000186, Time: 233.872909 seconds 
+Epoch 490, Loss:   0.000186, Time: 234.757475 seconds 
+Epoch 500, Loss:   0.000186, Time: 235.146617 seconds 
+Finished Training in 11893.1713 seconds 
+
+Training error: 0.000309 
+Testing error:  0.001195 
+
+-----------------
+LOG 
+-----------------
+
+
+Minimum training input : -0.6360727548599243
+Maximum training input : 0.6222620606422424
+Minimum training output : -0.45793503522872925
+Maximum training output : 0.4789828062057495
+Minimum testing input : -0.6360727548599243
+Maximum testing input : 0.6450855135917664
+Minimum testing output : -0.4885757565498352
+Maximum testing output : 0.5389117002487183
+
+
+Training error: 0.000309
+Testing error:  0.001195
+
+################
+Sample camel
+Train Error: 0.000207+0.000322 | 0.000132
+Test  Error: 0.000206+0.000309 | 0.000133
+
+
+################
+Sample horse
+Train Error: 0.000194+0.000280 | 0.000116
+Test  Error: 0.000197+0.000288 | 0.000118
+
+
+################
+Sample elephant
+Train Error:   --    +  --     |   --    
+Test  Error: 0.001432+0.016166 | 0.000470
+
+
+
+Total Mean Squared Error:
+
+Train Error: 0.000201+0.000302 | 0.000124
+Test  Error: 0.001040+0.013359 | 0.000300
+

@@ -1,0 +1,118 @@
+--exp_name meshlab_norot
+--model_name car_TRUCK_b50.2
+--dataset car_TRUCK
+--device_idx 0
+--refine 3
+--kernel_size 2
+--patch_zeromean True
+--batch_size 50
+--hid_rep 8
+--lr 0.001
+--Niter 250
+--seed 2
+(path) work_dir: /home/sahahner/2105_semireg_mesh_CNN/semiregmesh_public
+(path) data_fp: /home/sahahner/2105_semireg_mesh_CNN/semiregmesh_public/data/car_TRUCK
+(path) data_train_patches: /home/sahahner/2105_semireg_mesh_CNN/semiregmesh_public/data/car_TRUCK/train_patches_meshlab_norot
+(path) data_training_results: /home/sahahner/2105_semireg_mesh_CNN/semiregmesh_public/data/car_TRUCK/train_patches_meshlab_norot/output
+(path) model_fp: /home/sahahner/2105_semireg_mesh_CNN/semiregmesh_public/model/car_TRUCK
+
+-----------------
+LOG 
+-----------------
+
+62370 training samples
+32670 testing samples
+18184 trainable weights
+31621590 dimensional input
+
+Epoch   0, Loss:   0.001871, Time: 46.805858 seconds 
+Epoch  10, Loss:   0.000262, Time: 476.202321 seconds 
+Epoch  20, Loss:   0.000105, Time: 475.839301 seconds 
+Epoch  30, Loss:   0.000087, Time: 454.978125 seconds 
+Epoch  40, Loss:   0.000077, Time: 445.611476 seconds 
+Epoch  50, Loss:   0.000074, Time: 459.910403 seconds 
+Epoch  60, Loss:   0.000067, Time: 470.530743 seconds 
+Epoch  70, Loss:   0.000063, Time: 481.594422 seconds 
+Epoch  80, Loss:   0.000058, Time: 448.000890 seconds 
+Epoch  90, Loss:   0.000056, Time: 445.632701 seconds 
+Epoch 100, Loss:   0.000055, Time: 472.213805 seconds 
+Epoch 110, Loss:   0.000055, Time: 467.991962 seconds 
+Epoch 120, Loss:   0.000055, Time: 488.330582 seconds 
+Epoch 130, Loss:   0.000053, Time: 448.811803 seconds 
+Epoch 140, Loss:   0.000050, Time: 480.286369 seconds 
+Epoch 150, Loss:   0.000050, Time: 455.057494 seconds 
+Epoch 160, Loss:   0.000046, Time: 444.763553 seconds 
+Epoch 170, Loss:   0.000048, Time: 458.018992 seconds 
+Epoch 180, Loss:   0.000044, Time: 473.029178 seconds 
+Epoch 190, Loss:   0.000045, Time: 438.192844 seconds 
+Epoch 200, Loss:   0.000044, Time: 433.032853 seconds 
+Epoch 210, Loss:   0.000044, Time: 433.210120 seconds 
+Epoch 220, Loss:   0.000044, Time: 432.964811 seconds 
+Epoch 230, Loss:   0.000044, Time: 433.065035 seconds 
+Epoch 240, Loss:   0.000043, Time: 433.071303 seconds 
+Finished Training in 11387.0346 seconds 
+
+Training error: 0.002559 
+Testing error:  0.002544 
+
+-----------------
+LOG 
+-----------------
+
+Test Versions: ['sim_041', 'sim_049']
+
+Minimum training input : -0.6997705698013306
+Maximum training input : 0.6926485300064087
+Minimum training output : -0.6085083484649658
+Maximum training output : 0.670985221862793
+Minimum testing input : -0.6997687816619873
+Maximum testing input : 0.6926485300064087
+Minimum testing output : -0.6020593643188477
+Maximum testing output : 0.6711841821670532
+
+
+Training error: 0.002559
+Testing error:  0.002544
+
+################
+Sample part_003
+Train Error: 0.002075+0.001638 | 0.001665
+Test  Error: 0.002057+0.001488 | 0.001696
+
+
+################
+Sample part_001
+Train Error: 0.002547+0.002036 | 0.002079
+Test  Error: 0.002442+0.001893 | 0.002023
+
+
+################
+Sample part_004
+Train Error: 0.002788+0.003223 | 0.001372
+Test  Error: 0.002762+0.003169 | 0.001366
+
+
+################
+Sample part_000
+Train Error: 0.003491+0.002935 | 0.002765
+Test  Error: 0.003448+0.002876 | 0.002826
+
+
+################
+Sample part_005
+Train Error: 0.003372+0.004367 | 0.001608
+Test  Error: 0.003398+0.004374 | 0.001622
+
+
+################
+Sample part_002
+Train Error: 0.000099+0.000194 | 0.000058
+Test  Error: 0.000104+0.000183 | 0.000062
+
+
+
+Total Mean Squared Error:
+
+Train Error: 0.002486+0.003063 | 0.001457
+Test  Error: 0.002461+0.003017 | 0.001464
+

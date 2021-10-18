@@ -1,0 +1,78 @@
+
+-----------------
+LOG 
+-----------------
+
+Minimum testing input : -0.98796147108078
+Maximum testing input : 0.919471263885498
+Minimum testing output : -0.588556706905365
+Maximum testing output : 1.1675920486450195
+
+Testing error:  0.018794
+
+################
+Sample part_140
+Train Error:   --    +  --     |   --    
+Test  Error: 0.030671+0.042175 | 0.019348
+
+
+################
+Sample part_166
+Train Error:   --    +  --     |   --    
+Test  Error: 0.008688+0.007855 | 0.006547
+
+
+################
+Sample part_239
+Train Error:   --    +  --     |   --    
+Test  Error: 0.005502+0.006107 | 0.003525
+
+
+################
+Sample part_161
+Train Error:   --    +  --     |   --    
+Test  Error: 0.007273+0.006178 | 0.005849
+
+
+################
+Sample part_162
+Train Error:   --    +  --     |   --    
+Test  Error: 0.010790+0.011737 | 0.006825
+
+
+################
+Sample part_120
+Train Error:   --    +  --     |   --    
+Test  Error: 0.029644+0.040056 | 0.017468
+
+
+################
+Sample part_164
+Train Error:   --    +  --     |   --    
+Test  Error: 0.008862+0.010695 | 0.005395
+
+
+################
+Sample part_121
+Train Error:   --    +  --     |   --    
+Test  Error: 0.032512+0.039767 | 0.018207
+
+
+################
+Sample part_136
+Train Error:   --    +  --     |   --    
+Test  Error: 0.026128+0.028853 | 0.016126
+
+
+################
+Sample part_205
+Train Error:   --    +  --     |   --    
+Test  Error: 0.004263+0.005428 | 0.002984
+
+
+
+Total Mean Squared Error:
+
+Train Error:   --    +  --     |   --    
+Test  Error: 0.016817+0.027801 | 0.008057
+

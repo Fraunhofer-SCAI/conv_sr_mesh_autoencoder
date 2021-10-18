@@ -1,5 +1,12 @@
 # Mesh Convolutional Autoencoder for Semi-Regular Meshes of Different Sizes
+
 ### CoSMA: Convolutional Semi-Regular Mesh Autoencoder
+
+
+**Sara Hahner and Jochen Garcke**  
+*Fraunhofer Center for Machine Learning and SCAI, Sankt Augustin, Germany*   
+*Institut für Numerische Simulation, Universität Bonn, Germany*
+
 
 Contact sara.hahner@scai.fraunhofer.de for questions about code and data.
 

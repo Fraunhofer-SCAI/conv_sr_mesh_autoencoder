@@ -1,9 +1,13 @@
 data/*/train_patches*/
-data/*/semiregular/
-data/*/raw/
-data/*/preprocessed/
-data/*/semiregular/
+data/*/semiregular/*/projected_mesh*
+data/*/semiregular/logs/
+data/*/preprocessed/*/*vertex_values.p
+data/*/preprocessed/*/*reference.obj
+data/*/semiregular/*/subdivided_mesh*
+
 model/*/*.png
+
+data/*_results/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

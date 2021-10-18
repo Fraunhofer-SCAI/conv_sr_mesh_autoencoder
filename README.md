@@ -120,6 +120,7 @@ For the second and third step you can use this jupyter notebook, provided by the
 
 ## Citation
 
+```markdown
 @inproceedings{Hahner2022,
   author    = {Sara Hahner and
                Jochen Garcke},
@@ -129,6 +130,7 @@ For the second and third step you can use this jupyter notebook, provided by the
   publisher = {{IEEE}},
   year      = {2022}
 }
+```
 
 ## References
 

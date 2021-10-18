@@ -40,19 +40,25 @@ These files are written by the training and testing scripts. For each dataset we
 
 ## 5. Datasets and Reproduction of the Results
 
+The data (*.obj, *.ply, *.p) is tracked with Git LFS. If you install git LFS, the data is automatically downloaded when cloning the repository.
+```
+git lfs install
+git clone
+```
+
 File Structure in [data](data):
-- name of the dataset
-- **raw**: obj or ply files for each sample and version over time
+- name of the dataset ([gallop](data/gallop), [FAUST](data/FAUST), [car_TRUCK](data/car_TRUCK), [car_YARIS](data/car_YARIS))
+  - **raw**: obj or ply files for each sample and version over time
     - versions: for the car datasets there is one directory for each simulations
     - samples: for every version there are the same samples. Every sample can have a different mesh (car-dataset: different components, gallop: different animals, FAUST: different persons)
     - version/samples: these directories contain the deformed meshes
     - the raw-directories also contain the template meshes for the different samples. The remeshing for each sample/class of meshes is based on this template mesh. We provide our remeshing results to semi-regular connectivity. 
-- **preprocessed**: for every sample we provide the semi-regular base mesh
-- **semiregular**: for every sample we provide the semi-regular mesh, which has been refined to level three and has been fit to the shape of the irregular template mesh
-- **train_patches**: train patches which are inputted to the network. This directory is created during the preprocessing.
+  - **preprocessed**: for every sample we provide the semi-regular base mesh
+  - **semiregular**: for every sample we provide the semi-regular mesh, which has been refined to level three and has been fit to the shape of the irregular template mesh
+  - **train_patches**: train patches which are inputted to the network. This directory is created during the preprocessing.
 
 
-### GALLOP
+### a) [GALLOP](data/gallop)
 
 **Sumner et al: 2004: Deformation transferfor triangle meshes** [Webpage](https://people.csail.mit.edu/sumner/research/deftransfer/)
 
@@ -65,7 +71,7 @@ python 03_training.py --dataset gallop --exp_name coarsentofinalselection --mode
 python 04_testing.py  --dataset gallop --exp_name coarsentofinalselection --model_name gallop_training.seed1 --hid_rep 8 --seed 1 --test_split elephant
 ```
 
-### FAUST
+### b) [FAUST](data/FAUST)
 
 **Bogo et al, 2014: FAUST: Dataset and evaluation for 3Dmesh registration** [Webpage](http://faust.is.tue.mpg.de/)
 
@@ -90,7 +96,7 @@ python 03_training.py --dataset FAUST --exp_name coarsento110 --model_name FAUST
 python 04_testing.py  --dataset FAUST --exp_name coarsento110 --model_name FAUST_unknownpose.1 --hid_rep 8 --seed 1 --test_ratio 0.25
 ```
 
-### TRUCK and YARIS
+### c) [TRUCK](data/car_TRUCK) and [YARIS](data/car_YARIS)
 
 **National Crash Analysis Center (NCAC). Finite Element Model Archive**
 

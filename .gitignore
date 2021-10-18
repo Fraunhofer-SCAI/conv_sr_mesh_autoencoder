@@ -1,5 +1,6 @@
 data/*/train_patches*/
 data/*/semiregular/
+data/*/raw/
 data/*/preprocessed/
 data/*/semiregular/
 model/*/*.png

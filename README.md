@@ -134,14 +134,11 @@ For the second and third step you can use this jupyter notebook, provided by the
 ## Citation
 
 ```markdown
-@inproceedings{Hahner2022,
+@misc{Hahner2021,
   author    = {Sara Hahner and
                Jochen Garcke},
   title     = {Mesh Convolutional Autoencoder for Semi-Regular Meshes of Different Sizes},
-  booktitle = {{IEEE} Winter Conference on Applications of Computer Vision, {WACV}
-               2022},
-  publisher = {{IEEE}},
-  year      = {2022}
+  year      = {2021}
 }
 ```
 

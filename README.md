@@ -1,12 +1,12 @@
 # Mesh Convolutional Autoencoder for Semi-Regular Meshes of Different Sizes
 
-### CoSMA: Convolutional Semi-Regular Mesh Autoencoder
+### Implementation of CoSMA: Convolutional Semi-Regular Mesh Autoencoder
 
+[arXiv publication](https://arxiv.org/abs/2110.09401v2)
 
 **Sara Hahner and Jochen Garcke**  
 *Fraunhofer Center for Machine Learning and SCAI, Sankt Augustin, Germany*   
 *Institut für Numerische Simulation, Universität Bonn, Germany*
-
 
 Contact sara.hahner@scai.fraunhofer.de for questions about code and data.
 
@@ -47,7 +47,7 @@ These files are written by the training and testing scripts. For each dataset we
 
 ## 5. Datasets and Reproduction of the Results
 
-The data (*.obj, *.ply, *.p) is tracked with Git LFS. If you install git LFS, the data is automatically downloaded when cloning the repository.
+The data (*.obj, *.ply, *.p) is tracked with Git Large File Storage (LFS). If you install git LFS, the data is automatically downloaded when cloning the repository.
 ```
 git lfs install
 git clone
@@ -135,10 +135,12 @@ For the second and third step you can use this jupyter notebook, provided by the
 
 ```markdown
 @misc{Hahner2021,
-  author    = {Sara Hahner and
-               Jochen Garcke},
-  title     = {Mesh Convolutional Autoencoder for Semi-Regular Meshes of Different Sizes},
-  year      = {2021}
+      title={Mesh Convolutional Autoencoder for Semi-Regular Meshes of Different Sizes}, 
+      author={Sara Hahner and Jochen Garcke},
+      year={2021},
+      eprint={2110.09401},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
 }
 ```
 

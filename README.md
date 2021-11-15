@@ -47,11 +47,7 @@ These files are written by the training and testing scripts. For each dataset we
 
 ## 5. Datasets and Reproduction of the Results
 
-The data (*.obj, *.ply, *.p) is tracked with Git Large File Storage (LFS). If you install git LFS, the data is automatically downloaded when cloning the repository.
-```
-git lfs install
-git clone
-```
+The data is automatically downloaded and extracted with the script [scripts/00_get_data.sh](scripts/00_get_data.sh).
 
 File Structure in [data](data):
 - name of the dataset ([gallop](data/gallop), [FAUST](data/FAUST), [car_TRUCK](data/car_TRUCK), [car_YARIS](data/car_YARIS))
@@ -72,10 +68,11 @@ File Structure in [data](data):
 A dataset containing triangular meshes representing a motion sequence froma galloping horse, elephant, and camel.  Each sequence has 48 timesteps.  The three animals move in a similar way butthe meshes that represent the surfaces of the three animals are highly different in connectivity and in the number of vertices
 
 ```
-python 01_data_preprocessing.py --dataset gallop --exp_name coarsentofinalselection
-python 02_create_input_patches.py --dataset gallop --exp_name coarsentofinalselection --test_split elephant
-python 03_training.py --dataset gallop --exp_name coarsentofinalselection --model_name gallop_training.seed1 --hid_rep 8 --seed 1 
-python 04_testing.py  --dataset gallop --exp_name coarsentofinalselection --model_name gallop_training.seed1 --hid_rep 8 --seed 1 --test_split elephant
+bash scripts/00_get_data.sh gallop
+python scripts/01_data_preprocessing.py --dataset gallop --exp_name coarsentofinalselection
+python scripts/02_create_input_patches.py --dataset gallop --exp_name coarsentofinalselection --test_split elephant
+python scripts/03_training.py --dataset gallop --exp_name coarsentofinalselection --model_name gallop_training.seed1 --hid_rep 8 --seed 1 
+python scripts/04_testing.py  --dataset gallop --exp_name coarsentofinalselection --model_name gallop_training.seed1 --hid_rep 8 --seed 1 --test_split elephant
 ```
 
 ### b) [FAUST](data/FAUST)
@@ -85,22 +82,23 @@ python 04_testing.py  --dataset gallop --exp_name coarsentofinalselection --mode
 We conduct two different experiments:  at first we consider known poses of two unseen bodies in the testing set.  Then we consider two unknown poses of all bodies in the testing set.  In both cases, 20% of the data is included in the testing set.
 
 ```
-python 01_data_preprocessing.py --dataset FAUST --exp_name coarsento110
+bash scripts/00_get_data.sh FAUST
+python scripts/01_data_preprocessing.py --dataset FAUST --exp_name coarsento110
 ```
 
 ###### known poses: only interpolation of poses to different bodies
 ```
-python 02_create_input_patches.py --dataset FAUST --exp_name coarsento110_inter --test_split faust8 faust9 --test_ratio 0
-python 03_training.py --dataset FAUST --exp_name coarsento110_inter --model_name FAUST_knownpose.1 --hid_rep 8 --seed 1
-python 04_testing.py  --dataset FAUST --exp_name coarsento110_inter --model_name FAUST_knownpose.1 --hid_rep 8 --seed 1 --test_split faust8 faust9 --test_ratio 0
+python scripts/02_create_input_patches.py --dataset FAUST --exp_name coarsento110_inter --test_split faust8 faust9 --test_ratio 0
+python scripts/03_training.py --dataset FAUST --exp_name coarsento110_inter --model_name FAUST_knownpose.1 --hid_rep 8 --seed 1
+python scripts/04_testing.py  --dataset FAUST --exp_name coarsento110_inter --model_name FAUST_knownpose.1 --hid_rep 8 --seed 1 --test_split faust8 faust9 --test_ratio 0
 ```
 
 ###### unknown poses: only interpolation of poses to different bodies
 
 ```
-python 02_create_input_patches.py --dataset FAUST --exp_name coarsento110 --test_split none --test_ratio 0.25
-python 03_training.py --dataset FAUST --exp_name coarsento110 --model_name FAUST_unknownpose.1 --hid_rep 8 --seed 1 
-python 04_testing.py  --dataset FAUST --exp_name coarsento110 --model_name FAUST_unknownpose.1 --hid_rep 8 --seed 1 --test_ratio 0.25
+python scripts/02_create_input_patches.py --dataset FAUST --exp_name coarsento110 --test_split none --test_ratio 0.25
+python scripts/03_training.py --dataset FAUST --exp_name coarsento110 --model_name FAUST_unknownpose.1 --hid_rep 8 --seed 1 
+python scripts/04_testing.py  --dataset FAUST --exp_name coarsento110 --model_name FAUST_unknownpose.1 --hid_rep 8 --seed 1 --test_ratio 0.25
 ```
 
 ### c) [TRUCK](data/car_TRUCK) and [YARIS](data/car_YARIS)
@@ -113,12 +111,14 @@ python 04_testing.py  --dataset FAUST --exp_name coarsento110 --model_name FAUST
 We provide the semi-regular template meshes for each component and its projection over time, because of the size of the raw data.
 
 ```
-python 02_create_input_patches.py --dataset car_YARIS --exp_name meshlab --test_ratio 1    --rotation_augment 0
-python 02_create_input_patches.py --dataset car_TRUCK --exp_name meshlab --test_ratio -0.3 --rotation_augment 0 --test_version sim_041 sim_049
-python 03_training.py --dataset car_TRUCK --exp_name meshlab_norot --model_name car_TRUCK_b50.2 --hid_rep 8 --seed 2 --Niter 250 --batch_size 50
-python 04_testing.py  --dataset car_TRUCK --exp_name meshlab_norot --model_name car_TRUCK_b50.2 --hid_rep 8 --seed 2 --test_version sim_041 sim_049 --test_ratio -0.3
+bash scripts/00_get_data.sh car_TRUCK
+bash scripts/00_get_data.sh car_YARIS
+python scripts/02_create_input_patches.py --dataset car_YARIS --exp_name meshlab --test_ratio 1    --rotation_augment 0
+python scripts/02_create_input_patches.py --dataset car_TRUCK --exp_name meshlab --test_ratio -0.3 --rotation_augment 0 --test_version sim_041 sim_049
+python scripts/03_training.py --dataset car_TRUCK --exp_name meshlab_norot --model_name car_TRUCK_b50.2 --hid_rep 8 --seed 2 --Niter 250 --batch_size 50
+python scripts/04_testing.py  --dataset car_TRUCK --exp_name meshlab_norot --model_name car_TRUCK_b50.2 --hid_rep 8 --seed 2 --test_version sim_041 sim_049 --test_ratio -0.3
 cp model/car_TRUCK/model_meshlab_norot_car_TRUCK_b50.2.pt model/car_YARIS/model_meshlab_norot_car_TRUCK_b50.2.pt
-python 04_testing.py  --dataset car_YARIS --exp_name meshlab_norot --model_name car_TRUCK_b50.2 --hid_rep 8 --test_ratio 1
+python scripts/04_testing.py  --dataset car_YARIS --exp_name meshlab_norot --model_name car_TRUCK_b50.2 --hid_rep 8 --test_ratio 1
 ```
 
 ## 6. Remeshing

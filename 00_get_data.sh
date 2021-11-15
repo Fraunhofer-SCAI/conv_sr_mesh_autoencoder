@@ -4,6 +4,7 @@ dataset=$1
 
 echo "Download data for dataset: " $dataset
 
+mkdir -p data
 cd data
 
 if [[ "$dataset" == "car_TRUCK" ]]

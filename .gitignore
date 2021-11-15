@@ -4,6 +4,7 @@ data/*/semiregular/logs/
 data/*/preprocessed/*/*vertex_values.p
 data/*/preprocessed/*/*reference.obj
 data/*/semiregular/*/subdivided_mesh*
+data_via_owncloud/
 
 model/*/*.png
 

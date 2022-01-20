@@ -2,6 +2,8 @@
 
 ### Implementation of CoSMA: Convolutional Semi-Regular Mesh Autoencoder
 
+[paper](https://openaccess.thecvf.com/content/WACV2022/html/Hahner_Mesh_Convolutional_Autoencoder_for_Semi-Regular_Meshes_of_Different_Sizes_WACV_2022_paper.html)
+
 [arXiv publication](https://arxiv.org/abs/2110.09401v2)
 
 **Sara Hahner and Jochen Garcke**  
@@ -134,13 +136,13 @@ For the second and third step you can use this jupyter notebook, provided by the
 ## Citation
 
 ```markdown
-@misc{Hahner2021,
-      title={Mesh Convolutional Autoencoder for Semi-Regular Meshes of Different Sizes}, 
-      author={Sara Hahner and Jochen Garcke},
-      year={2021},
-      eprint={2110.09401},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV}
+@InProceedings{Hahner2022,
+    author    = {Hahner, Sara and Garcke, Jochen},
+    title     = {Mesh Convolutional Autoencoder for Semi-Regular Meshes of Different Sizes},
+    booktitle = {Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)},
+    month     = {January},
+    year      = {2022},
+    pages     = {885-894}
 }
 ```
 

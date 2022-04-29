@@ -49,7 +49,7 @@ These files are written by the training and testing scripts. For each dataset we
 
 ## 5. Datasets and Reproduction of the Results
 
-The data is automatically downloaded and extracted with the script [scripts/00_get_data.sh](scripts/00_get_data.sh).
+The data is automatically downloaded and extracted with the script [00_get_data.sh](scripts/00_get_data.sh).
 
 File Structure in [data](data):
 - name of the dataset ([gallop](data/gallop), [FAUST](data/FAUST), [car_TRUCK](data/car_TRUCK), [car_YARIS](data/car_YARIS))

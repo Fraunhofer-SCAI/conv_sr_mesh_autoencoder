@@ -9,16 +9,16 @@ cd data
 
 if [[ "$dataset" == "car_TRUCK" ]]
 then
-	wget https://owncloud.scai.fraunhofer.de/index.php/s/oRsS9poCSewArd5/download/car_TRUCK.tar.gz
+ 	wget https://owncloud.scai.fraunhofer.de/index.php/s/6psYweG7PMrL82o/download/car_TRUCK.tar.gz
 elif [[ "$dataset" == "car_YARIS" ]]
 then 
-	wget https://owncloud.scai.fraunhofer.de/index.php/s/wP9pBCH7zdMY4sC/download/car_YARIS.tar.gz
+ 	wget https://owncloud.scai.fraunhofer.de/index.php/s/it4a6kewHeAL2Jw/download/car_YARIS.tar.gz
 elif [[ "$dataset" == "FAUST" ]]
 then 
-	wget https://owncloud.scai.fraunhofer.de/index.php/s/e3p6sWjzFccJDnt/download/FAUST.tar.gz
+ 	wget https://owncloud.scai.fraunhofer.de/index.php/s/6sToXMPcgKJeqdE/download/FAUST.tar.gz
 elif [[ "$dataset" == "gallop" ]]
 then 
-	wget https://owncloud.scai.fraunhofer.de/index.php/s/5FZ8t6AoyaKpemF/download/gallop.tar.gz
+ 	wget https://owncloud.scai.fraunhofer.de/index.php/s/bXi6pAAZXHxQE9z/download/gallop.tar.gz
 else
 	echo "Not a valid dataset."
 fi

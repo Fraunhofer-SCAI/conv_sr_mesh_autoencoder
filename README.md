@@ -10,7 +10,7 @@
 *Fraunhofer Center for Machine Learning and SCAI, Sankt Augustin, Germany*   
 *Institut für Numerische Simulation, Universität Bonn, Germany*
 
-Contact sara.hahner@scai.fraunhofer.de for questions about code and data.
+Contact hahner.sa@gmail.com for questions about code and data.
 
 ## 1. Abstract
 

@@ -12,6 +12,7 @@
 
 Contact hahner.sa@gmail.com for questions about code and data.
 
+*Note*: Also have a look at our improved CoSMA version: [spectral CoSMA](https://github.com/Fraunhofer-SCAI/spectral_CoSMA)
 ## 1. Abstract
 
 The analysis of deforming 3D surface meshes is accelerated by autoencoders since the low-dimensional embeddings can be used to visualize underlying dynamics.
@@ -52,7 +53,7 @@ These files are written by the training and testing scripts. For each dataset we
 The data is automatically downloaded and extracted with the script [00_get_data.sh](00_get_data.sh).
 
 File Structure in [data](data):
-- name of the dataset ([gallop](data/gallop), [FAUST](data/FAUST), [car_TRUCK](data/car_TRUCK), [car_YARIS](data/car_YARIS))
+- name of the dataset (gallop, FAUST, car_TRUCK, car_YARIS)
   - **raw**: obj or ply files for each sample and version over time
     - versions: for the car datasets there is one directory for each simulations
     - samples: for every version there are the same samples. Every sample can have a different mesh (car-dataset: different components, gallop: different animals, FAUST: different persons)
@@ -63,7 +64,7 @@ File Structure in [data](data):
   - **train_patches**: train patches which are inputted to the network. This directory is created during the preprocessing.
 
 
-### a) [GALLOP](data/gallop)
+### a) GALLOP
 
 **Sumner et al: 2004: Deformation transferfor triangle meshes** [Webpage](https://people.csail.mit.edu/sumner/research/deftransfer/)
 
@@ -77,7 +78,7 @@ python 03_training.py --dataset gallop --exp_name coarsentofinalselection --mode
 python 04_testing.py  --dataset gallop --exp_name coarsentofinalselection --model_name gallop_training.seed1 --hid_rep 8 --seed 1 --test_split elephant
 ```
 
-### b) [FAUST](data/FAUST)
+### b) FAUST
 
 **Bogo et al, 2014: FAUST: Dataset and evaluation for 3Dmesh registration** [Webpage](http://faust.is.tue.mpg.de/)
 
@@ -103,7 +104,7 @@ python 03_training.py --dataset FAUST --exp_name coarsento110 --model_name FAUST
 python 04_testing.py  --dataset FAUST --exp_name coarsento110 --model_name FAUST_unknownpose.1 --hid_rep 8 --seed 1 --test_ratio 0.25
 ```
 
-### c) [TRUCK](data/car_TRUCK) and [YARIS](data/car_YARIS)
+### c) TRUCK and YARIS
 
 **National Crash Analysis Center (NCAC). Finite Element Model Archive**
 
